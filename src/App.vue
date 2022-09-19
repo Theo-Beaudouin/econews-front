@@ -1,13 +1,9 @@
 <script setup>
-	import Header from '@/components/layout/HeaderLayout.vue'
-	import Footer from '@/components/layout/FooterLayout.vue'
+	import { RouterView } from 'vue-router'
 </script>
 
 <template>
-	<div>
-		<Header />
-		<Footer />
-	</div>
+	<RouterView />
 </template>
 
 <style scoped>

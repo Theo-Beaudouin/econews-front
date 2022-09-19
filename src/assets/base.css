@@ -21,6 +21,16 @@ html body {
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
     font-size: 1.15em;
+}
+
+/*
+    Originally, those attributes were on 'html body'.
+    Although, Vue creates a <div> tag that contains the entire app.
+    Meaning the css would apply on the single <div> insted of the <header>, <main> and <footer>
+*/
+#app
+{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

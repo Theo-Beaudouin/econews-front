@@ -7,7 +7,7 @@
             <div class="post">
                 <h2 class="post-title">Post title</h2>
                 <hr class="post-insep">
-                <img class="post-img" src="../assets/placeholder_media.png" alt="placeholder media">
+                <img class="post-img" src="@/assets/placeholder_media.png" alt="placeholder media">
                 <p class="post-excerpt">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Odit commodi delectus accusamus eius perferendis ducimus cumque iure vel!
@@ -30,7 +30,7 @@
             <div class="post">
                 <h2 class="post-title">Post title</h2>
                 <hr class="post-insep">
-                <img class="post-img" src="../assets/placeholder_media.png" alt="placeholder media">
+                <img class="post-img" src="@/assets/placeholder_media.png" alt="placeholder media">
                 <p class="post-excerpt">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Odit commodi delectus accusamus eius perferendis ducimus cumque iure vel!
@@ -52,7 +52,7 @@
             <div class="post">
                 <h2 class="post-title">Post title</h2>
                 <hr class="post-insep">
-                <img class="post-img" src="../assets/placeholder_media.png" alt="placeholder media">
+                <img class="post-img" src="@/assets/placeholder_media.png" alt="placeholder media">
                 <p class="post-excerpt">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Odit commodi delectus accusamus eius perferendis ducimus cumque iure vel!

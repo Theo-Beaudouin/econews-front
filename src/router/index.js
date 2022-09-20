@@ -27,11 +27,11 @@ const router = createRouter({
     },
     {
       path: '/post/create',
-      name: 'post-create',
+      name: 'create-post',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/PostCreateView.vue')
+      component: () => import('../views/post/CreatePostView.vue')
     },
     {
       path: '/post/list',
@@ -39,7 +39,16 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/PostListView.vue')
+      component: () => import('../views/post/PostListView.vue')
+    },
+    {
+      //! Later on, it would be a dynamic route with [:id]
+      path: '/post/single',
+      name: 'single-post',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/post/SinglePostView.vue')
     }
   ]
 })

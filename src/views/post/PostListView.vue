@@ -9,12 +9,12 @@
     import FooterLayout from '@/components/template/FooterLayout.vue'
     import PostLayout from '@/components/post/PostLayout.vue'
 
-export default {
-    components:
-    {
-        HeaderLayout,
-        FooterLayout,
-        PostLayout
+    export default {
+        components:
+        {
+            HeaderLayout,
+            FooterLayout,
+            PostLayout
+        }
     }
-}
 </script>

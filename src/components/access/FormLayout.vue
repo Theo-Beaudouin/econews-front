@@ -22,7 +22,7 @@
             <button class="btn">Log in</button>
         </form>
 
-        <form class="main-form" method="get" name="signup" v-if="signupState">
+        <form class="main-form" method="post" name="signup" v-if="signupState">
             <label for="email">Email</label>
             <input type="email" id="email" name="email">
 

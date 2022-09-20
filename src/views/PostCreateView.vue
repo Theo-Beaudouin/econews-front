@@ -1,13 +1,13 @@
 <template>
     <HeaderLayout />
-    <FormLayout />
+    <CreateFormLayout />
     <FooterLayout />
 </template>
 
 <script>
     import HeaderLayout from '@/components/template/HeaderLayout.vue'
     import FooterLayout from '@/components/template/FooterLayout.vue'
-    import FormLayout from '@/components/access/FormLayout.vue'
+    import CreateFormLayout from '@/components/post/CreateFormLayout.vue'
 
     export default
     {
@@ -15,12 +15,8 @@
         {
             HeaderLayout,
             FooterLayout,
-            FormLayout
+            CreateFormLayout
         }
     }
 
 </script>
-
-<style scoped>
-
-</style>

@@ -95,11 +95,7 @@
     </main>
 </template>
 
-<script>
-export default {
-
-}
-</script>
+<script></script>
 
 <style scoped>
 

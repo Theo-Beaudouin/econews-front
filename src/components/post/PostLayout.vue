@@ -23,72 +23,14 @@
                         Username
                     </p>
                 </div>
+                
+                <!--
+                    <slot> will allow to put, at this specific location,
+                    anything we want when calling the component.
+                -->
+                <slot></slot>
+
                 <hr>
-            </div>
-            
-
-            <div class="post">
-                <h2 class="post-title">Post title</h2>
-                <hr class="post-insep">
-                <img class="post-img" src="@/assets/placeholder_media.png" alt="placeholder media">
-                <p class="post-excerpt">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Odit commodi delectus accusamus eius perferendis ducimus cumque iure vel!
-                    Exercitationem quis tenetur quas corporis necessitatibus itaque dolores reiciendis modi, fuga molestiae.
-                </p>
-                <div class="post-secondary">
-                    <p class="post-detail">
-                        <i class="fa-regular fa-clock"></i>
-                        03/25/2020
-                    </p>
-                    <p class="post-detail">
-                        <i class="fa-regular fa-user"></i>
-                        Username
-                    </p>
-                </div>
-                <hr>
-            </div>
-
-            <div class="post">
-                <h2 class="post-title">Post title</h2>
-                <hr class="post-insep">
-                <img class="post-img" src="@/assets/placeholder_media.png" alt="placeholder media">
-                <p class="post-excerpt">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Odit commodi delectus accusamus eius perferendis ducimus cumque iure vel!
-                    Exercitationem quis tenetur quas corporis necessitatibus itaque dolores reiciendis modi, fuga molestiae.
-                </p>
-                <div class="post-secondary">
-                    <p class="post-detail">
-                        <i class="fa-regular fa-clock"></i>
-                        03/25/2020
-                    </p>
-                    <p class="post-detail">
-                        <i class="fa-regular fa-user"></i>
-                        Username
-                    </p>
-                </div>
-                <hr class="post-sep-last">
-            </div>
-
-            <div class="post">
-                <h2 class="post-title">Post title</h2>
-                <hr class="post-insep">
-                <p class="post-excerpt">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Odit commodi delectus accusamus eius perferendis ducimus cumque iure vel!
-                    Exercitationem quis tenetur quas corporis necessitatibus itaque dolores reiciendis modi, fuga molestiae.
-                </p>
-                <div class="post-secondary">
-                    <p class="post-detail">
-                        <i class="fa-regular fa-clock"></i>
-                        03/25/2020
-                    </p>
-                    <p class="post-detail">
-                        <i class="fa-regular fa-user"></i>
-                        Username
-                    </p>
-                </div>
             </div>
         </div>
 

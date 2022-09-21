@@ -1,20 +1,22 @@
 <template>
     <HeaderLayout />
-    <PostLayout />
+    <CategoryLayout />
     <FooterLayout />
 </template>
 
 <script>
     import HeaderLayout from '@/components/template/HeaderLayout.vue'
     import FooterLayout from '@/components/template/FooterLayout.vue'
-    import PostLayout from '@/components/post/PostLayout.vue'
+    import CategoryLayout from '@/components/CategoryLayout.vue'
 
-export default {
-    components:
+    export default
     {
-        HeaderLayout,
-        FooterLayout,
-        PostLayout
+        components:
+        {
+            HeaderLayout,
+            FooterLayout,
+            CategoryLayout
+        }
     }
-}
+
 </script>

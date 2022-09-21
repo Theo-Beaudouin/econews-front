@@ -56,6 +56,7 @@
 </script>
 
 <style scoped>
+    
     main
     {
         display: flex;
@@ -87,18 +88,5 @@
     {
         color: #ffde59;
         border-left: #ffde59 solid 3px;
-    }
-
-    .form-forgot
-    {
-        font-size: 17px;
-        color: #ffde59;
-        cursor: pointer;
-        align-self: flex-end;
-    }
-
-    .form-forgot:hover
-    {
-        text-decoration: underline;
     }
 </style>

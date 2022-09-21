@@ -52,4 +52,11 @@
         margin: 15px 0;
     }
 
+    hr
+    {
+        border: 1px solid grey;
+        width: 1024px;
+        margin: 30px auto 15px auto;
+    }
+
 </style>

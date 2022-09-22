@@ -1,11 +1,11 @@
 <template>
     <main>
         <div class="main-tab">
-            <p class="tab-options" @click="isTabActive('login')"  :class="{ tabActive: loginState }">
+            <p class="tab-options" @click="loginState = true, signupState = false"  :class="{ tabActive: loginState }">
                 <i class="fa-solid fa-arrow-right-to-bracket"></i>
                 Log in
             </p>
-            <p class="tab-options" @click="isTabActive('signup')" :class="{ tabActive: signupState }">
+            <p class="tab-options" @click="loginState = false, signupState = true" :class="{ tabActive: signupState }">
                 <i class="fa-solid fa-user-plus"></i>
                 Sign up
             </p>
@@ -37,19 +37,6 @@
         {
             LoginFormLayout,
             SignupFormLayout
-        },
-        methods:
-        {
-            isTabActive(tab) {
-                if(tab == 'login') {
-                    this.loginState = true
-                    this.signupState = false
-                }
-                else if (tab == 'signup')  {
-                    this.loginState = false
-                    this.signupState = true
-                }
-            }
         }
     }
 

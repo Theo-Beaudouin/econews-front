@@ -27,7 +27,7 @@ const router = createRouter({
     },
     {
       path: '/post/create',
-      name: 'create-post',
+      name: 'createPost',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -35,7 +35,7 @@ const router = createRouter({
     },
     {
       path: '/post/list',
-      name: 'post-list',
+      name: 'postList',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -44,7 +44,7 @@ const router = createRouter({
     {
       //! Later on, it would be a dynamic route with [:id]
       path: '/post/single',
-      name: 'single-post',
+      name: 'singlePost',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -53,7 +53,7 @@ const router = createRouter({
     {
       //! Later on, it would be a dynamic route with [:id]
       path: '/account/user',
-      name: 'user-account',
+      name: 'userAccount',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.

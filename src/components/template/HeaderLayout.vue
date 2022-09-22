@@ -4,14 +4,14 @@
             <i class="fa-solid fa-magnifying-glass"></i>
             <img class="header-logo" src="@/assets/logo.png" alt="Circular econews logo depicting a golden tree with a green background">
             <div class="header-menu">
-                <p class="menu-title">
-                    Username
+                <p class="menu-title" @click="menuVisible = true">
+                    Menu
                     <i class="fa-solid fa-circle-arrow-right"></i>
                 </p>
             </div>
         </div>
 
-        <div class="menu-ctn">
+        <div class="menu-ctn" v-if="menuVisible == true">
             <div class="menu-options-list">
                 <router-link :to="{ name: userAccount }" class="options-item">
                     Account
@@ -25,13 +25,23 @@
                 <router-link :to="{ name: home }" class="options-item logout">
                     Log out
                 </router-link>
-                <i class="fa-regular fa-circle-xmark"></i>
+                <i class="fa-regular fa-circle-xmark" @click="menuVisible = false"></i>
             </div>
         </div>
     </header>
 </template>
 
-<script></script>
+<script>
+    export default
+    {
+        data()
+        {
+            return {
+                menuVisible: false
+            }
+        }
+    }
+</script>
 
 <style scoped>
     header
@@ -60,6 +70,8 @@
         margin: auto;
     }
 
+/* ---------- Burger menu ---------- */
+
     .menu-title
     {
         font-weight: 500;
@@ -76,7 +88,7 @@
 
     /*
         .menu-options-list is here to counter the background-color of the <header>.
-        Because I do not want a css attribute of "display: absolute",
+        I do not want a css attribute of "display: absolute",
         the menu is part of the header, his 100% width and green background color.
         This is why the only reason this class exist
         is for having a white background on the sides of the menu.
@@ -85,20 +97,6 @@
     .menu-ctn
     {
         background-color: #fff;
-    }
-
-    .menu-options-list
-    {
-        border-top: solid 1px #ffde59;
-        background-color: #043419;
-        width: 1024px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-        margin: auto;
-        padding: 10px;
-        border-radius: 0 0 10px 10px;
     }
 
     .options-item
@@ -149,6 +147,20 @@
         {
             width: 1024px;
             margin: auto;
-        }  
+        }
+
+        .menu-options-list
+        {
+            border-top: solid 1px #ffde59;
+            background-color: #043419;
+            width: 1024px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            margin: auto;
+            padding: 10px;
+            border-radius: 0 0 10px 10px;
+        }
     }
 </style>

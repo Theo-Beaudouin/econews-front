@@ -21,11 +21,33 @@ const apiClient = axios.create({
 });
 
 export default {
+
+    // ADDITIONNAL INFORMATIONS :
+    // - '?_embed' = Necessary to get embedded ressources that do not show without.
+    // - The first parameter in an url of a Wordpress app is always '?',
+    //   If, there is more then 1 parameter, then the subsequent paremeters will be declared with '&' before them.
+
     /*
      * 'findAll()' will get every posts.
-     * This is a test method.
+     * The Wordpress API will only fetch 10 objects (can be changed on the back-end)
      */
     findAll() {
         return apiClient.get(`/posts?_embed`);
-    }
+    },
+
+    /*
+     * 'find()' will get a post with an id.
+     * 'id' is the post's id.
+     */
+    find(id) {
+        return apiClient.get(`/posts/${id}?_embed`);
+    },
+
+    /*
+     * 'findByCategory()' will get posts based on their categories.
+     * 'id' is the category's id.
+     */
+    findByCategory(id) {
+        return apiClient.get(`/posts?category=${id}&_embed`);
+    },
 }

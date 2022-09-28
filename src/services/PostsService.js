@@ -24,8 +24,8 @@ export default {
 
     // ADDITIONNAL INFORMATIONS :
     // - '?_embed' = Necessary to get embedded ressources that do not show without.
-    // - The first parameter in an url of a Wordpress app is always '?',
-    //   If, there is more then 1 parameter, then the subsequent paremeters will be declared with '&' before them.
+    // - The first global parameter (or meta-parameter) in an url of a Wordpress app always has '?' before it.
+    //   If, there is more then 1 parameter, then the subsequent parameters will be declared with '&' before them.
 
     /*
      * 'findAll()' will get every posts.

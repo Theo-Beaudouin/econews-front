@@ -1,5 +1,13 @@
 <template>
-    <PostLayout />
+    <PostLayout
+        v-for="post in posts" :key="post.id"
+        :title="post.title.rendered"
+        :imgSrc="post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].source_url : 'src/assets/placeholder_media.png'"
+        :imgAlt="post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].alt_text : 'no thumbnail'"
+        :excerpt="post.excerpt.rendered"
+        :date="post.date"
+        :author="post._embedded['author'][0].name"
+    />
 </template>
 
 <script>
@@ -27,11 +35,10 @@
                     /// BUT, in prod, it will have to be deleted !!
                     console.log('Posts', response.data);
                     /// 'posts', that is declared in 'data()', will hold the data's response.
-                    /// The data from the response is slice to only receive 10 objects
                     
                     /// Side note : The WP API only sends 10 objects by default,
                     /// if it isn't enough, it has to be changed in the back-end.
-                    this.posts = response.data.slice(0, 10);
+                    this.posts = response.data;
                 }
             )
         }

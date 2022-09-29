@@ -5,23 +5,19 @@
 
         <div class="main-grid">
             <div class="post">
-                <h2 class="post-title">Post title</h2>
+                <h2 class="post-title" v-html="title"></h2>
                 <hr class="post-insep">
-                <img class="post-img" src="@/assets/placeholder_media.png" alt="placeholder media">
-                <p class="post-excerpt">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Odit commodi delectus accusamus eius perferendis ducimus cumque iure vel!
-                    Exercitationem quis tenetur quas corporis necessitatibus itaque dolores reiciendis modi, fuga molestiae.
-                </p>
+                <img class="post-img" :src="imgSrc" :alt="imgAlt">
+                <p class="post-excerpt" v-html="excerpt"></p>
                 <div class="post-secondary">
-                    <p class="post-detail">
+                    <div class="post-detail">
                         <i class="fa-regular fa-clock"></i>
-                        03/25/2020
-                    </p>
-                    <p class="post-detail">
+                        <p v-html="date"></p>
+                    </div>
+                    <div class="post-detail">
                         <i class="fa-regular fa-user"></i>
-                        Username
-                    </p>
+                        <p v-html="author"></p>
+                    </div>
                 </div>
                 
                 <!--
@@ -107,6 +103,9 @@
     .post-detail
     {
         font-size: 15px;
+        display: inline-flex;
+        gap: 5px;
+        align-items: center;
     }
 
     @media (min-width: 768px)

@@ -2,7 +2,7 @@
     <main>
         <h3 class="main-title">Recent</h3>
         <hr class="main-vertsep">
-        
+
         <div class="main-grid">
             <PostLayout
                 v-for="post in posts" :key="post.id"
@@ -10,7 +10,7 @@
                 :imgSrc="post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].source_url : 'src/assets/placeholder_media.png'"
                 :imgAlt="post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].alt_text : 'no thumbnail'"
                 :excerpt="post.excerpt.rendered"
-                :date="post.date"
+                :date="post.formatted_date"
                 :author="post._embedded['author'][0].name"
             />
         </div>

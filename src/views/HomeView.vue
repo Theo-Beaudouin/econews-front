@@ -1,8 +1,5 @@
 <template>
     <HeaderLayout />
-
-
-
     <PostListLayout />
     <FooterLayout />
 </template>

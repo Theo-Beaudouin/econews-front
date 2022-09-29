@@ -1,36 +1,28 @@
 <template>
-    <main>
-        <h3 class="main-title">Recent</h3>
-        <hr class="main-vertsep">
-
-        <div class="main-grid">
-            <div class="post">
-                <h2 class="post-title" v-html="title"></h2>
-                <hr class="post-insep">
-                <img class="post-img" :src="imgSrc" :alt="imgAlt">
-                <p class="post-excerpt" v-html="excerpt"></p>
-                <div class="post-secondary">
-                    <div class="post-detail">
-                        <i class="fa-regular fa-clock"></i>
-                        <p v-html="date"></p>
-                    </div>
-                    <div class="post-detail">
-                        <i class="fa-regular fa-user"></i>
-                        <p v-html="author"></p>
-                    </div>
+        <div class="post">
+            <h2 class="post-title" v-html="title"></h2>
+            <hr class="post-insep">
+            <img class="post-img" :src="imgSrc" :alt="imgAlt">
+            <p class="post-excerpt" v-html="excerpt"></p>
+            <div class="post-secondary">
+                <div class="post-detail">
+                    <i class="fa-regular fa-clock"></i>
+                    <p v-html="date"></p>
                 </div>
-                
-                <!--
-                    <slot> will allow to put at this specific location,
-                    anything we want when calling the component.
-                -->
-                <slot></slot>
-
-                <hr>
+                <div class="post-detail">
+                    <i class="fa-regular fa-user"></i>
+                    <p v-html="author"></p>
+                </div>
             </div>
-        </div>
+            
+            <!--
+                <slot> will allow to put at this specific location,
+                anything we want when calling the component.
+            -->
+            <slot></slot>
 
-    </main>
+            <hr>
+        </div>
 </template>
 
 <script>
@@ -53,19 +45,6 @@
 </script>
 
 <style scoped>
-
-    .main-title
-    {
-        text-align: center;
-        font-size: 25px;
-        font-weight: 500;
-        margin-bottom: 15px;
-    }
-
-    .main-vert-sep
-    {
-        display: none
-    }
 
     .post-title
     {
@@ -106,40 +85,5 @@
         display: inline-flex;
         gap: 5px;
         align-items: center;
-    }
-
-    @media (min-width: 768px)
-    {
-        main
-        {
-            position: relative;
-        }
-
-        .main-vertsep
-        {
-            display: block !important;
-            height: calc(100% - 45px);
-            width: 2px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            position: absolute;
-        }
-
-        .main-grid
-        {
-            display: grid;
-            grid-template-columns: [col-start] 1fr [col1] 1fr [col-end];
-        }
-
-        .post
-        {
-            padding: 0 10px;
-        }
-
-        .post-sep-last
-        {
-            display: none !important;
-        }
     }
 </style>

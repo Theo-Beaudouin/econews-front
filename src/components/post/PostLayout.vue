@@ -1,30 +1,30 @@
 <template>
-        <div class="post">
-            <router-link class="post-link" :to="{ name: 'singlePost', params: { postId: id } }">
-                <h2 class="post-title">{{ title }}</h2>
-            </router-link>
-            <hr class="post-insep">
-            <img class="post-img" :src="imgSrc" :alt="imgAlt">
-            <p class="post-excerpt">{{ excerpt }}</p>
-            <div class="post-secondary">
-                <div class="post-detail">
-                    <i class="fa-regular fa-clock"></i>
-                    <p v-html="date"></p>
-                </div>
-                <div class="post-detail">
-                    <i class="fa-regular fa-user"></i>
-                    <p v-html="author"></p>
-                </div>
+    <div class="post">
+        <router-link class="post-link" :to="{ name: 'singlePost', params: { postId: id } }">
+            <h2 class="post-title">{{ title }}</h2>
+        </router-link>
+        <hr class="post-insep">
+        <img class="post-img" :src="imgSrc" :alt="imgAlt">
+        <p class="post-excerpt">{{ excerpt }}</p>
+        <div class="post-secondary">
+            <div class="post-detail">
+                <i class="fa-regular fa-clock"></i>
+                <p v-html="date"></p>
             </div>
-            
-            <!--
-                <slot> will allow to put at this specific location,
-                anything we want when calling the component.
-            -->
-            <slot></slot>
-
-            <hr>
+            <div class="post-detail">
+                <i class="fa-regular fa-user"></i>
+                <p v-html="author"></p>
+            </div>
         </div>
+        
+        <!--
+            <slot> will allow to put at this specific location,
+            anything we want when calling the component.
+        -->
+        <slot></slot>
+
+        <hr>
+    </div>
 </template>
 
 <script>

@@ -37,10 +37,10 @@ export default {
 
     /*
      * 'find()' will get a post with an id.
-     * 'id' is the post's id.
+     * 'id' is the post id.
      */
-    find(id) {
-        return apiClient.get(`/posts/${id}?_embed`);
+    find(postId) {
+        return apiClient.get(`/posts/${postId}?_embed`);
     },
 
     /*

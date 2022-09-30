@@ -42,8 +42,7 @@ const router = createRouter({
       component: () => import('../views/post/PostListView.vue')
     },
     {
-      //! Later on, it would be a dynamic route with [:id]
-      path: '/post/single',
+      path: '/post/:postId',
       name: 'singlePost',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route

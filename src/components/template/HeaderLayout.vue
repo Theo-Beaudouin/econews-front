@@ -2,7 +2,9 @@
     <header>
         <div class="header-ctn">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <img class="header-logo" src="@/assets/logo.png" alt="Circular econews logo depicting a golden tree with a green background">
+            <router-link :to="{ name: 'home' }" class="header-home">
+                <img class="header-logo" src="@/assets/logo.png" alt="Circular econews logo depicting a golden tree with a green background">
+            </router-link>
             <div class="header-menu">
                 <p class="menu-title" @click="menuVisible = true">
                     Menu
@@ -13,16 +15,16 @@
 
         <div class="menu-ctn" v-if="menuVisible == true">
             <div class="menu-options-list">
-                <router-link :to="{ name: userAccount }" class="options-item">
+                <router-link :to="{ name: 'userAccount' }" class="options-item">
                     Account
                 </router-link>
-                <router-link :to="{ name: category }" class="options-item">
+                <router-link :to="{ name: 'category' }" class="options-item">
                     Categories
                 </router-link>
-                <router-link :to="{ name: createPost }" class="options-item">
+                <router-link :to="{ name: 'createPost' }" class="options-item">
                     Create a post
                 </router-link>
-                <router-link :to="{ name: home }" class="options-item logout">
+                <router-link :to="{ name: 'home' }" class="options-item logout">
                     Log out
                 </router-link>
                 <i class="fa-regular fa-circle-xmark" @click="menuVisible = false"></i>
@@ -61,6 +63,15 @@
         padding: 0 10px 0 10px;
     }
 
+    .header-home
+    {
+        height: 40px;
+        width: 40px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
     .header-logo
     {
         position: absolute;
@@ -68,6 +79,40 @@
         left: 0;
         right: 0;
         margin: auto;
+        animation: smaller-out 0.1s ease-out;
+    }
+
+    .header-logo:hover
+    {
+        animation: bigger-in 0.1s ease-out;
+        width: 42px;
+        border: solid 2px rgb(255, 222, 89, 0.5);
+        background-color: rgb(255, 222, 89, 0.5);
+        border-radius: 5px;
+    }
+
+    @keyframes bigger-in
+    {
+        from {
+            width: 40px;
+            border: none;
+        }
+        to {
+            width: 42px;
+            border: solid 2px rgb(255, 222, 89, 0.5);
+        }
+    }
+
+    @keyframes smaller-out
+    {
+        from {
+            width: 42px;
+            border: solid 2px rgb(255, 222, 89, 0.5);
+        }
+        to {
+            width: 40px;
+            border: none;
+        }
     }
 
 /* ---------- Burger menu ---------- */

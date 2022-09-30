@@ -7,6 +7,7 @@
             <PostLayout
                 v-for="post in posts" :key="post.id"
                 :title="post.title.rendered"
+                :id="post.id"
                 :imgSrc="post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].source_url : 'src/assets/placeholder_media.png'"
                 :imgAlt="post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia'][0].alt_text : 'no thumbnail'"
                 :excerpt="post.excerpt.rendered"

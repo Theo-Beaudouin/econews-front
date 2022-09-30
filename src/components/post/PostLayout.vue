@@ -1,6 +1,8 @@
 <template>
         <div class="post">
-            <h2 class="post-title">{{ title }}</h2>
+            <router-link class="post-link" :to="{ name: 'singlePost', params: { postId: id } }">
+                <h2 class="post-title">{{ title }}</h2>
+            </router-link>
             <hr class="post-insep">
             <img class="post-img" :src="imgSrc" :alt="imgAlt">
             <p class="post-excerpt">{{ excerpt }}</p>
@@ -39,16 +41,35 @@
             imgAlt: String,
             excerpt: String,
             date: String,
-            author: String
-        }
+            author: String,
+            id: Number
+        },
     }
 </script>
 
 <style scoped>
 
+    .post-link
+    {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .post-link:hover
+    {
+        text-decoration: underline;
+        color: #ffde59;
+        text-shadow: 1px 1px 3px #000;
+    }
+
     .post-title
     {
         font-size: 20px;
+    }
+
+    .post-title:hover
+    {
+        font-weight: 600;
     }
 
     .post-insep

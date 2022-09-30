@@ -13,16 +13,16 @@
 
         <div class="menu-ctn" v-if="menuVisible == true">
             <div class="menu-options-list">
-                <router-link :to="{ name: userAccount }" class="options-item">
+                <router-link :to="{ name: 'userAccount' }" class="options-item">
                     Account
                 </router-link>
-                <router-link :to="{ name: category }" class="options-item">
+                <router-link :to="{ name: 'category' }" class="options-item">
                     Categories
                 </router-link>
-                <router-link :to="{ name: createPost }" class="options-item">
+                <router-link :to="{ name: 'createPost' }" class="options-item">
                     Create a post
                 </router-link>
-                <router-link :to="{ name: home }" class="options-item logout">
+                <router-link :to="{ name: 'home' }" class="options-item logout">
                     Log out
                 </router-link>
                 <i class="fa-regular fa-circle-xmark" @click="menuVisible = false"></i>

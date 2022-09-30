@@ -1,9 +1,9 @@
 <template>
         <div class="post">
-            <h2 class="post-title" v-html="title"></h2>
+            <h2 class="post-title">{{ title }}</h2>
             <hr class="post-insep">
             <img class="post-img" :src="imgSrc" :alt="imgAlt">
-            <p class="post-excerpt" v-html="excerpt"></p>
+            <p class="post-excerpt">{{ excerpt }}</p>
             <div class="post-secondary">
                 <div class="post-detail">
                     <i class="fa-regular fa-clock"></i>
